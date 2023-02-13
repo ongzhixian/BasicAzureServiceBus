@@ -1,0 +1,20 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01-preview/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "serviceBusNamespace": {
+            "type": "String"
+        }
+    },
+    "resources": [
+        {
+            "type": "Microsoft.ServiceBus/namespaces",
+            "apiVersion": "2022-10-01-preview",
+            "name":  "[parameters('serviceBusNamespace')]",
+            "location": "southeastasia",
+            "sku": {
+                "name": "Basic"
+            }
+        }
+    ]
+}

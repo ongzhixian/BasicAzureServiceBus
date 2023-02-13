@@ -1,0 +1,2 @@
+# az deployment group create --resource-group az305 --template-file .\deploy-servicebus.json --parameters serviceBusNamespace=az305c
+az deployment group create --resource-group az305 --template-file .\deploy-servicebus.json --parameters '@deploy-servicebus.parameters.json'
